@@ -7,6 +7,13 @@
   /* Кольори */
   --color-primary: #2F5D50;        /* основний: шапка, заголовки */
   --color-primary-dark: #244A40;
+  --color-header: #2F5D50;         /* фон шапки, меню, заголовків таблиць */
+  --color-footer: #23201D;         /* фон підвалу */
+  --color-on-dark: #FFFFFF;        /* текст на кольоровому фоні */
+  --color-surface-alt: rgba(245, 240, 230, 0.6); /* «зебра» таблиць */
+  --color-link-hover: #18624A;     /* посилання при наведенні (−10 %) */
+  --color-price: #A85728;          /* цінник (стиль задає JS) */
+  --color-price-bg: rgba(201, 111, 58, 0.14);
   --color-bg: #F5F0E6;             /* фон: небілений льон */
   --color-surface: #FFFFFF;        /* картки, форми */
   --color-accent: #C96F3A;         /* кнопки дії */
@@ -134,7 +141,7 @@ a {
 }
 
 a:hover {
-  color: #18624A; /* затемнення на 10 % */
+  color: var(--color-link-hover);
   text-decoration: underline;
 }
 
@@ -188,13 +195,13 @@ td {
 }
 
 thead th {
-  background-color: var(--color-primary);
-  color: var(--color-surface);
+  background-color: var(--color-header);
+  color: var(--color-on-dark);
   font-weight: 600;
 }
 
 tbody tr:nth-child(even) {
-  background-color: rgba(245, 240, 230, 0.6);
+  background-color: var(--color-surface-alt);
 }
 
 tbody th {

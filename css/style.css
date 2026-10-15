@@ -8,4 +8,5 @@
 @import url("layout.css");      /* каркас: шапка, меню, сітки сторінок, підвал */
 @import url("components.css");  /* кнопки, картки, бейджі, галерея, відгуки */
 @import url("forms.css");       /* поля форм і стани валідації */
+@import url("theme.css");       /* темна тема та елементи, якими керує JS */
 @import url("responsive.css");  /* медіазапити для планшета й десктопа */

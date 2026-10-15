@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&amp;family=Inter:wght@400;500;600;700&amp;family=Unbounded:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+  <script src="./js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Перейти до основного вмісту</a>
@@ -21,6 +21,10 @@
         <img src="images/logo.svg" alt="Логотип RemesloUA" width="40" height="40">
         RemesloUA
       </a>
+      <button class="theme-toggle" type="button" aria-pressed="false" title="Змінити тему">
+        <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+        <span class="theme-toggle-text">Змінити тему</span>
+      </button>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
         <span class="burger-line" aria-hidden="true"></span>
         <span class="burger-line" aria-hidden="true"></span>
@@ -57,6 +61,16 @@
         <h2 id="mission-title">Наша місія</h2>
         <p>Зробити українське ремесло видимим і доступним: дати кожному майстрові професійний цифровий інструмент для продажу, а покупцеві — надійний спосіб придбати автентичний виріб напряму в автора, зберігаючи та популяризуючи традиційні ремесла України.</p>
         <p>Ми поєднуємо маркетплейс і спільноту: окрім каталогу, на платформі є блог про традиційні техніки, календар ярмарків і майстер-класів та історії майстрів.</p>
+        <button class="btn btn-outline more-toggle" type="button" aria-expanded="false" aria-controls="mission-more">Показати більше</button>
+        <div class="more-content" id="mission-more" hidden>
+          <p>Ідея RemesloUA з’явилася після ярмарку в Опішні: майстри розповідали, що продають вироби лише через Instagram, а замовлення губляться в особистих повідомленнях. Тоді ми вирішили зробити місце, де кожен ремісник отримає власну вітрину без витрат на розробку сайту.</p>
+          <p>Наші найближчі плани:</p>
+          <ul>
+            <li>залучити 300 верифікованих майстрів і 5 000 виробів протягом першого року;</li>
+            <li>запустити англомовну версію для української діаспори;</li>
+            <li>додати календар ярмарків і майстер-класів по всій Україні.</li>
+          </ul>
+        </div>
       </section>
 
       <section class="section" aria-labelledby="values-title">

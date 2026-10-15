@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&amp;family=Inter:wght@400;500;600;700&amp;family=Unbounded:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+  <script src="./js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Перейти до основного вмісту</a>
@@ -21,6 +21,10 @@
         <img src="images/logo.svg" alt="Логотип RemesloUA" width="40" height="40">
         RemesloUA
       </a>
+      <button class="theme-toggle" type="button" aria-pressed="false" title="Змінити тему">
+        <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+        <span class="theme-toggle-text">Змінити тему</span>
+      </button>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
         <span class="burger-line" aria-hidden="true"></span>
         <span class="burger-line" aria-hidden="true"></span>
@@ -56,10 +60,11 @@
       <div class="contacts-layout section">
         <section aria-labelledby="form-title">
           <h2 id="form-title">Форма зворотного зв’язку</h2>
-          <form class="form" action="#" method="post" data-validate data-success="Дякуємо! Ваше повідомлення надіслано, ми відповімо найближчим часом." novalidate>
+          <p class="form-greeting" hidden></p>
+          <form class="form" action="#" method="post" aria-label="Зворотний зв’язок" data-validate data-success="Форма успішно надіслана!" novalidate>
             <div class="form-row">
               <label for="name">Ім’я *</label>
-              <input type="text" id="name" name="name" autocomplete="name" minlength="2" required>
+              <input type="text" id="name" name="name" autocomplete="name" minlength="3" required>
               <p class="form-error" id="name-error" aria-live="polite"></p>
             </div>
             <div class="form-row">
@@ -94,6 +99,7 @@
             <button class="btn" type="submit">Надіслати</button>
             <p class="form-status" aria-live="polite"></p>
           </form>
+          <div class="form-output" aria-live="polite" hidden></div>
         </section>
 
         <section aria-labelledby="info-title">

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&amp;family=Inter:wght@400;500;600;700&amp;family=Unbounded:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+  <script src="./js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Перейти до основного вмісту</a>
@@ -21,6 +21,10 @@
         <img src="images/logo.svg" alt="Логотип RemesloUA" width="40" height="40">
         RemesloUA
       </a>
+      <button class="theme-toggle" type="button" aria-pressed="false" title="Змінити тему">
+        <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+        <span class="theme-toggle-text">Змінити тему</span>
+      </button>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
         <span class="burger-line" aria-hidden="true"></span>
         <span class="burger-line" aria-hidden="true"></span>
@@ -69,6 +73,16 @@
           <p class="rating"><span role="img" aria-label="Рейтинг 4.8 з 5">★★★★★</span> <span class="card-meta">4.8 (24 відгуки)</span></p>
           <p class="price">850 грн</p>
           <p>Глек сформовано вручну на гончарному крузі з червоної опішнянської глини, покрито ангобом і безпечною харчовою поливою. Підходить для молока, води та як декоративна ваза для сухоцвітів.</p>
+          <button class="btn btn-outline more-toggle" type="button" aria-expanded="false" aria-controls="product-more">Показати більше</button>
+          <div class="more-content" id="product-more" hidden>
+            <p>Кожен глек проходить два випали: перший — при 900 °C, другий, після нанесення поливи, — при 1050 °C. Тому малюнок і відтінок глини в кожного виробу трохи різні.</p>
+            <p>Як доглядати:</p>
+            <ul>
+              <li>мийте вручну теплою водою без абразивних засобів;</li>
+              <li>не ставте на відкритий вогонь і в мікрохвильову піч;</li>
+              <li>уникайте різких перепадів температури.</li>
+            </ul>
+          </div>
 
           <h2>Характеристики</h2>
           <div class="table-wrap">
@@ -85,7 +99,7 @@
           </table>
           </div>
 
-          <form class="product-actions" action="#" method="post" data-validate data-success="Товар додано до кошика!" novalidate>
+          <form class="product-actions" action="#" method="post" aria-label="Додати в кошик" data-validate data-success="Товар додано до кошика!" novalidate>
             <label for="qty">Кількість</label>
             <input type="number" id="qty" name="qty" value="1" min="1" max="3" required>
             <button class="btn" type="submit">Додати в кошик</button>

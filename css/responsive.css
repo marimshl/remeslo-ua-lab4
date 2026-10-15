@@ -135,7 +135,7 @@
   }
 
   .table-stack tbody tr:nth-child(even) {
-    background-color: rgba(245, 240, 230, 0.6);
+    background-color: var(--color-surface-alt);
   }
 
   .table-stack td {

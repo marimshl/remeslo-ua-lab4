@@ -127,6 +127,8 @@ input[type="radio"] {
 /* Помилка: червона рамка й тінь.
    Правила розділено: браузер, що не знає :user-invalid, відкидає весь
    список селекторів, тому варіант з aria-invalid має бути окремим. */
+/* .is-invalid ставить власна валідація з js/main.js (ЛР4) */
+.is-invalid,
 [aria-invalid="true"] {
   border-color: var(--color-error) !important;
   box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.15) !important;

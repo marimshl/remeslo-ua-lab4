@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&amp;family=Inter:wght@400;500;600;700&amp;family=Unbounded:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+  <script src="./js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Перейти до основного вмісту</a>
@@ -21,6 +21,10 @@
         <img src="images/logo.svg" alt="Логотип RemesloUA" width="40" height="40">
         RemesloUA
       </a>
+      <button class="theme-toggle" type="button" aria-pressed="false" title="Змінити тему">
+        <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+        <span class="theme-toggle-text">Змінити тему</span>
+      </button>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
         <span class="burger-line" aria-hidden="true"></span>
         <span class="burger-line" aria-hidden="true"></span>
@@ -141,7 +145,7 @@
       <div class="container">
         <h2 id="newsletter-title">Новини ярмарків і майстер-класів</h2>
         <p>Підпишіться на розсилку — раз на тиждень, без спаму.</p>
-        <form class="newsletter-form" action="#" method="post" data-validate data-success="Дякуємо за підписку!" novalidate>
+        <form class="newsletter-form" action="#" method="post" aria-label="Підписка на розсилку" data-validate data-success="Дякуємо за підписку!" novalidate>
           <label class="visually-hidden" for="newsletter-email">Ваш email</label>
           <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" required>
           <button class="btn" type="submit">Підписатися</button>
